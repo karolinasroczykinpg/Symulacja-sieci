@@ -18,7 +18,7 @@ class ProductSender
         nodeType type;
 
         ProductSender(int _duration) : duration(_duration) {};
-        void setProbability(Receiver*);
+        void setProbability(Receiver*,double);
         void sendProduct(Product*);
         int getDuration() {return duration;};
         bool hasProducts();
