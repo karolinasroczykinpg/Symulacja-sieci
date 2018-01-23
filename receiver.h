@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include <sender.hpp>
+#include <product.h>
 
 class ProductReceiver
 {
@@ -12,7 +12,6 @@ class ProductReceiver
         virtual void receiveProduct(Product*) = 0;
         virtual std::string showProductList(void) = 0;
         virtual int getID() = 0;
-
 };
 
 class Storehouse : public ProductReceiver
@@ -20,13 +19,13 @@ class Storehouse : public ProductReceiver
     private:
         std::vector<Product*> ListOfProducts;
     public:
-        int id;
+        int ID;
 
-        Storehouse(int _id) : id(_id);
+        Storehouse(int _id) : ID(_id);
 
         virtual void receiveProduct(Product*) override;
         virtual std::string showProductList(void) override;
-        virtual int getID() override {return id;};
+        virtual int getID() override {return ID;};
 };
 
 #endif
