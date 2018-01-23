@@ -1,6 +1,7 @@
 #ifndef PRODUCT_SENDER
 #define PRODUCT_SENDER
 
+#include<factory.h>
 #include <vector>
 #include<map>
 #include <string>
