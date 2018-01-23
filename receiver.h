@@ -24,9 +24,15 @@ class Storehouse : public ProductReceiver
 
         Storehouse(int _id) : ID(_id);
 
+<<<<<<< HEAD
         virtual void receiveProduct(Product*) override;
         virtual std::string showProductList(void) override;
         virtual int getID() override {return ID;};
+=======
+        void receiveProduct(Product*) override;
+        std::string showProductList(void) override;
+        int getID() override {return id;};
+>>>>>>> bc5b15200d9f198e456d1a0239a856e9bfca56ca
 };
 
 #endif
