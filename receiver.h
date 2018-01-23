@@ -1,6 +1,7 @@
 #ifndef Network
 #define Network
 
+#include<factory.h>
 #include <vector>
 #include <string>
 #include <product.h>
