@@ -2,24 +2,30 @@
 #define PRODUCT_SENDER
 
 #include <vector>
+#include<map>
 #include <string>
 #include <receiver.h> //tutaj nazwa drugiego
+#include <product.h>
 
 class ProductSender
 {
     private:
         int duration;
-        std::vector<pair<Receiver,probability>> connections;
+        std::vector<pair<Receiver*,probability>> connections;
 
     public:
         nodeType type;
 
         ProductSender(int _duration) : duration(_duration) {};
-        void setProbability(Receiver);
+        void setProbability(Receiver*);
         void sendProduct(Product*);
-
         int getDuration() {return duration;};
         bool hasProducts();
+
+        void setPreferences(std::map<Receiver*, double>);
+        std::map<Receiver*, double> getPreferences();
+        void addReceiver(Receiver*,double);
+        void removeReceiver(Receiver *);
 
 };
 
