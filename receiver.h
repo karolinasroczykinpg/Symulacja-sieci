@@ -25,9 +25,9 @@ class Storehouse : public ProductReceiver
 
         Storehouse(int _id) : id(_id);
 
-        virtual void receiveProduct(Product*) override;
-        virtual std::string showProductList(void) override;
-        virtual int getID() override {return id;};
+        void receiveProduct(Product*) override;
+        std::string showProductList(void) override;
+        int getID() override {return id;};
 };
 
 #endif

@@ -43,7 +43,7 @@ class Worker : public ProductReceiver, public ProductSender
         int getDuration();
 
     private:
-        Storage* storage;
+        //Storage* storage;
         void setType() {type=worker;};
 
 };

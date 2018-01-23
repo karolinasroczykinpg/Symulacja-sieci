@@ -2,6 +2,13 @@
 #define Product
 
 
+enum type
+{
+    storehouse,
+    ramp,
+    worker
+};
+
 class Product {
 private:
 	int ID;
