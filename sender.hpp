@@ -48,12 +48,12 @@ class Worker : public ProductReceiver, public ProductSender
 
 };
 
-class LoadingRamp : public ProductSender
+class Ramp : public ProductSender
 {
     public:
         int id;
 
-        LoadingRamp(int _id, int _duration) : id(_id), ProductSender(_duration) {type = loadingRamp;};
+        Ramp(int _id, int _duration) : id(_id), ProductSender(_duration) {type = Ramp;};
         virtual void nextRound(int) override;
 
     private:
